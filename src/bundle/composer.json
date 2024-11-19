@@ -1,0 +1,68 @@
+{
+    "name": "ndiritu/sample-bundle",
+    "description": "Test kiota bundle package",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Philip Gichuhi",
+            "email": "pgichuhi@microsoft.com"
+        }
+    ],
+    "minimum-stability": "stable",
+	"repositories": [
+		{
+			"type": "path",
+			"url": "../abstractions",
+			"options": {
+				"symlink": false
+			}
+		},
+		{
+			"type": "path",
+			"url": "../authentication/phpleague",
+			"options": {
+				"symlink": false
+			}
+		},
+		{
+			"type": "path",
+			"url": "../serialization/json",
+			"options": {
+				"symlink": false
+			}
+		},
+		{
+			"type": "path",
+			"url": "../http/guzzle",
+			"options": {
+				"symlink": false
+			}
+		}
+	],
+    "require": {
+		"php": "^7.4 || ^8.0",
+		"ndiritu/sample-abstractions": "^1.0.2",
+		"ndiritu/sample-authentication-phpleague": "^1.0.0",
+		"ndiritu/sample-serialization-json": "^1.0.0",
+		"ndiritu/sample-http-guzzle": "^1.0.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.5.13",
+		"phpstan/phpstan": "^1.4.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Microsoft\\Kiota\\Bundle\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Microsoft\\Kiota\\Bundle\\Test\\": "tests/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"php-http/discovery": false
+		}
+	}
+}
