@@ -1,0 +1,12 @@
+{
+    "name": "ndiritu/sample-monorepo",
+    "description": "Testing mono repo config",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Philip Gichuhi",
+            "email": "pgichuhi@microsoft.com"
+        }
+    ],
+    "require": {}
+}
